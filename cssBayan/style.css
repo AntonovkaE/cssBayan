@@ -93,6 +93,7 @@
 @media screen and (min-width: 320px) {
     .meme__title {
         font-size: 1.2rem;
+        text-align: start;
     }
 
     .meme__label {
