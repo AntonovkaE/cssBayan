@@ -22,13 +22,9 @@
     background-repeat: no-repeat;
 }
 
-.meme-list:hover > .meme > .meme__header > .meme__button  {
-    display: flex;
 
-}
 
 .meme {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +37,17 @@
     flex-wrap: nowrap;
     padding: 5%;
     align-items: center;
+}
+
+.meme__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme__input {
+    display: none;
 }
 
 .meme__title {
@@ -56,14 +63,18 @@
     display: none;
 }
 
-.meme:hover > .meme__img {
+.meme:hover > .meme__label > .meme__img {
     display: flex;
 }
 
-.meme:hover > .meme__header > .meme__button {
+.meme-list:hover > .meme > .meme__label > .meme__header > .meme__button  {
+    display: flex;
+}
+
+.meme:hover > .meme__label > .meme__header > .meme__button {
     transform: rotate(45deg);
 }
 
-.meme:nth-child(4n) > .meme__img{
+.meme__input:checked ~ .meme__img{
     display: flex;
 }
