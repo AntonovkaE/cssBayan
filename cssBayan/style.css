@@ -1,3 +1,7 @@
+.page-title {
+    font-size: 2rem;
+}
+
 .section {
     margin: 10% auto;
     width: 70%;
@@ -9,6 +13,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .meme__button {
     display: none;
     position: static;
@@ -28,6 +33,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10%;
+    border-bottom: lightgray 1px solid;
 }
 
 .meme__header {
@@ -36,7 +43,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 5%;
+    padding: 1% 1% 0.5%;
     align-items: center;
 }
 
@@ -52,10 +59,6 @@
     display: none;
 }
 
-/*.meme__input:focus ~ .meme__header {*/
-/*    opacity: 0.7;*/
-/*    transition: opacity 1s;*/
-/*}*/
 
 .meme__title {
     margin: 0;
@@ -72,11 +75,11 @@
     display: flex;
     height: 0;
     transform: scale(1, 0);
-    transition: transform 1s ease-in, height 0.7s;
+    transition: transform 0.7s ease-in-out, height 0.7s;
 }
 
 
-.meme__input:checked ~ .meme__img{
+.meme__input:checked ~ .meme__img {
     transform: scale(1);
     height: auto;
 }
@@ -91,18 +94,21 @@
     .meme__title {
         font-size: 1.2rem;
     }
+
     .meme__label {
         cursor: pointer;
     }
+
     .meme:hover > .meme__label > .meme__img {
         height: 100%;
         transform: scale(1, 1);
     }
+
     .meme-list:hover > .meme > .meme__label > .meme__header > .meme__title {
         color: #000000;
     }
 
-    .meme-list:hover > .meme > .meme__label > .meme__header > .meme__button  {
+    .meme-list:hover > .meme > .meme__label > .meme__header > .meme__button {
         display: flex;
     }
 
@@ -115,9 +121,18 @@
 @media screen and (min-width: 820px) {
     .section {
         width: 70%;
+        margin: 1% auto;
     }
+
+    .meme {
+        padding: 1%;
+    }
+
     .meme__title {
         font-size: 1.5rem;
+    }
+    .meme__img {
+        width: 50%;
     }
 
 }
