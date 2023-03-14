@@ -1,0 +1,154 @@
+.page-title {
+    font-size: 2rem;
+}
+
+.section {
+    margin: 10% auto;
+    width: 70%;
+}
+
+.meme-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.meme__button {
+    display: none;
+    position: static;
+    width: 4rem;
+    height: 4rem;
+    color: #000000;
+    border: none;
+    background-color: transparent;
+    background-image: url("./assets/plus-svgrepo-com.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 1s;
+}
+
+.meme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+    border-bottom: lightgray 0.1rem solid;
+}
+
+.meme__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 1% 1% 0.5%;
+    align-items: center;
+}
+
+.meme__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.meme__input {
+    display: none;
+}
+
+
+.meme__title {
+    margin: 0;
+    text-align: center;
+    width: 80%;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.meme__img {
+    width: 100%;
+    object-position: center;
+    object-fit: contain;
+    display: flex;
+    height: 0;
+    transform: scale(1, 0);
+    transition: transform 0.7s ease-in-out, height 0.7s;
+}
+
+
+.meme__input:checked ~ .meme__img {
+    transform: scale(1);
+    height: auto;
+}
+
+.meme__input:checked ~ .meme__header > .meme__button {
+    display: flex;
+    transform: rotate(45deg);
+}
+
+
+@media screen and (min-width: 320px) {
+    .meme__title {
+        font-size: 1.2rem;
+        text-align: start;
+    }
+
+    .meme__label {
+        cursor: pointer;
+    }
+
+    .meme:hover > .meme__label > .meme__img {
+        height: 100%;
+        transform: scale(1, 1);
+    }
+
+    .meme-list:hover > .meme > .meme__label > .meme__header > .meme__title {
+        color: #000000;
+    }
+
+    .meme-list:hover > .meme > .meme__label > .meme__header > .meme__button {
+        display: flex;
+    }
+
+    .meme:hover > .meme__label > .meme__header > .meme__button {
+        transform: rotate(45deg);
+    }
+}
+
+
+@media screen and (min-width: 820px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    .section {
+        width: 70%;
+        margin: 1% auto;
+    }
+
+    .meme {
+        padding: 1%;
+    }
+
+    .meme__title {
+        font-size: 1.5rem;
+    }
+    .meme__img {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+    .page-title {
+        font-size: 3rem;
+    }
+    .section {
+        width: 50%;
+    }
+    .meme__title {
+        font-size: 2rem;
+    }
+}
